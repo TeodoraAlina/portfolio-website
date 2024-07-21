@@ -30,7 +30,7 @@ export default function About() {
         <div className= "grid min-h-[140px] w-medium place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
           <img
         className="object-cover object-center w-medium rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
-        src='./hero.jpeg'
+        src='./assets/hero.jpeg'
         alt="hero"
         />
         </div>
