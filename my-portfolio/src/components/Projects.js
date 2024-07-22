@@ -39,6 +39,12 @@ export default function Projects() {
                   <p className="text-gray-600 leading-relaxed text-center">
                     {project.description}
                   </p>
+                  <a
+                    href={project.github}
+                    className="mt-4 px-6 py-2 text-accent bg-textPrimary border-0 focus:outline-none hover:bg-gray-700 hover:text-white rounded"
+                  >
+                    Github Repository
+                  </a>
                 </div>
               </div>
             </a>
