@@ -25,7 +25,7 @@ export const projects = [
         link: "https://start-packing-6d194f35b54b.herokuapp.com/",
         github: "https://github.com/TeodoraAlina/start-packing",
     },
-
+    
     {
         title: "Cool the Earth",
         subtitle: "HTML, CSS, JavaScript, ReactJS, Django Rest Framework, React Bootstrap",
@@ -34,4 +34,17 @@ export const projects = [
         link: "https://cool-the-earth-2122f9015977.herokuapp.com/",
         github: "https://github.com/TeodoraAlina/cool-the-earth",
     }
-]
+];
+
+export const skills = [
+    "JavaScript",
+    "React",
+    "Python",
+    "HTML",
+    "CSS",
+    "Django",
+    "Django Rest Framework",
+    "ReactJS",
+    "Bootstrap",
+    "React Bootstrap",
+];
