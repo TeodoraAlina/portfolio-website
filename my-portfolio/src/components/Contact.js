@@ -24,8 +24,35 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact">
+    <section id="contact" className='map-section'>
       <div className="container">
+        <div className="map">
+          <iframe
+            width="100%"
+            height="100%"
+            title="map"
+            className="map-iframe"
+            src="https://www.google.com/maps/embed/v1/place?q=Innsbruck,+Austria&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+          />
+          <div className="map-info">
+            <div className="address">
+              <h2 className="address-title">
+                ADDRESS
+              </h2>
+              <p className="address-text">
+                Innsbruck, Austria
+              </p>
+            </div>
+            <div className="email">
+              <h2 className="email-title">
+                EMAIL
+              </h2>
+              <a className="email-link" href='mailto:alina.teower@gmail.com'>
+                alina.teower@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
         <form
           netlify
           name="contact"
