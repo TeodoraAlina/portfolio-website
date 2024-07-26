@@ -2,3 +2,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes arrowPulse {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .animate-arrow {
+    animation: arrowPulse 1s infinite;
+  }
+  
+  .hover-scale:hover {
+    animation: scaleUp 0.3s ease-in-out forwards;
+  }
