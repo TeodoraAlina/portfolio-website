@@ -5,14 +5,14 @@ export default function About() {
     <section id="about">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center font-roboto">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-primary">
-            Hi, I'm Alina Teodora.
-            <br className="lg:inline-block" />Lorem ipsum dolor sit amet.
-          </h1>
-          <p className="mb-8 leading-relaxed text-secondary">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-            laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-            Laborum, voluptas natus?
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-primary">
+          <span className="block text-3xl sm:text-4xl font-extrabold">Hi, I'm Alina Teodora.</span>
+          <span className="block text-lg sm:text-xl font-medium text-secondary mt-2">Full-Stack Software Developer</span>
+        </h1>
+          <p className="mb-8 leading-relaxed text-secondary mt-2">
+            I'm passionate about technology and problem-solving.
+            I aim to create useful, user-friendly applications and deliver high-quality results, 
+            whether it's on the frontend, backend, or full-stack.
           </p>
           <div className="flex justify-center">
             <a

@@ -8,12 +8,11 @@ export default function Skills() {
       <div className="container px-5 py-10 mx-auto">
         <div className='text-center mb-20'>
           <ChipIcon className='w-10 inline-block mb-4' />
-          <h1 className='sm:text-4xl text-3xl font-medium title-font text-primary mb-4'>
+          <h1 className='sm:text-4xl text-3xl font-medium title-font text-primary mb-6'>
             Skills &amp; Technologies
           </h1>
           <p className='text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-secondary'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Explicabo facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam fuga dolore.
+            I'm adept at using a range of modern technologies to build versatile and efficient applications.
           </p>
         </div>
         <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2'>

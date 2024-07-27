@@ -11,10 +11,11 @@ export default function Projects() {
           <h1 className="sm:text-4xl text-3xl font-extrabold title-font mb-4 text-primary font-roboto">
             Projects I've Built
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-secondary">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-secondary mt-2">
+            My projects highlight a range of technical skills and creativity. From a static HTML and CSS website
+            for a psychologist, to a Python command line app for restaurant delivery, and full-stack applications 
+            like "Smells Like Vacay" for vacation packing and "Cool the Earth" for environmental awareness.
+            Each project reflects my diverse skills and evolving expertise.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
