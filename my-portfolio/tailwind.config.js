@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     './public/index.html',
@@ -12,18 +13,33 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: '#0D9488',
+          DEFAULT: 'var(--color-primary)',
         },
         secondary: {
-          DEFAULT: '#374151',
+          DEFAULT: 'var(--color-secondary)',
         },
         accent: {
-          DEFAULT: '#f7fafc',
+          DEFAULT: 'var(--color-accent)',
         },
         textPrimary: {
-          DEFAULT: '#1F2937',
+          DEFAULT: 'var(--color-textPrimary)',
         },
-      }
+        textHover: {
+          DEFAULT: 'var(--color-textHover)'
+        },
+        buttonHover: {
+          DEFAULT: 'var(--color-buttonHover)'
+        },
+        secondaryButtonHover: {
+          DEFAULT: 'var(--color-secondaryButtonHover)'
+        },
+        darkerPrimary: {
+          DEFAULT: 'var(--color-darkerPrimary)'
+        },
+        darkerSecondary: {
+          DEFAULT: 'var(--color-darkerSecondary)'
+        }
+      },
     },
   },
   plugins: [],

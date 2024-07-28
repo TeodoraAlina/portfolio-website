@@ -31,3 +31,28 @@
   .hover-scale:hover {
     animation: scaleUp 0.3s ease-in-out forwards;
   }
+
+  
+  :root {
+    --color-primary: #6fbbb1;
+    --color-secondary: #ECEFF1;
+    --color-accent: #FFFFFF;
+    --color-textPrimary: #263238;
+    --color-textHover: #37474F;
+    --color-buttonHover: #3C6F66;
+    --color-secondaryButtonHover: #B0BEC5;
+    --color-darkerPrimary: #249a88;
+    --color-darkerSecondary: #455A64;
+}
+
+.dark {
+    --color-primary: #249a88;
+    --color-secondary: #455A64;
+    --color-accent: #37474F;
+    --color-textPrimary: #ECEFF1;
+    --color-textHover: #CFD8DC;
+    --color-buttonHover: #5FA99A;
+    --color-secondaryButtonHover: #607D8B;
+    --color-darkerPrimary: #6fbbb1;
+    --color-darkerSecondary: #ECEFF1;
+}
