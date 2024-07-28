@@ -18,7 +18,7 @@ module.exports = {
           DEFAULT: '#374151',
         },
         accent: {
-          DEFAULT: '#E5E7EB',
+          DEFAULT: '#f7fafc',
         },
         textPrimary: {
           DEFAULT: '#1F2937',

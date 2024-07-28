@@ -1,3 +1,16 @@
+import { SiJavascript,
+        SiReact, 
+        SiPython,
+        SiHtml5,
+        SiCss3,
+        SiDjango,
+        SiBootstrap,
+        SiReactos,
+        SiTailwindcss,
+        SiGit,
+        SiGithub,
+    } from "react-icons/si";
+
 export const projects = [
     {
         title: "Climate Circles",
@@ -37,14 +50,16 @@ export const projects = [
 ];
 
 export const skills = [
-    "JavaScript",
-    "React",
-    "Python",
-    "HTML",
-    "CSS",
-    "Django",
-    "Django Rest Framework",
-    "ReactJS",
-    "Bootstrap",
-    "React Bootstrap",
-];
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "Python", icon: SiPython },
+    { name: "HTML", icon: SiHtml5 },
+    { name: "CSS", icon: SiCss3 },
+    { name: "React", icon: SiReact },
+    { name: "Django", icon: SiDjango },
+    { name: "Django Rest Framework", icon: SiDjango },
+    { name: "Bootstrap", icon: SiBootstrap },
+    { name: "React Bootstrap", icon: SiReactos },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "Github", icon: SiGithub },
+    { name: "Git", icon: SiGit},
+  ];

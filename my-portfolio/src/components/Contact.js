@@ -25,7 +25,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className='relative bg-gray-300 font-roboto'>
+    <section id="contact" className='relative bg-gray-200 font-roboto'>
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-primary rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
