@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-primary bg-opacity-90 md:sticky top-0 z-10 shadow-lg">
+    <header className="bg-primary md:sticky top-0 z-10 shadow-lg">
       <div className="w-full max-w-7xl mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <div className="flex justify-between w-full md:w-auto items-center">
           <a 

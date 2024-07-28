@@ -7,7 +7,7 @@ export default function Projects() {
     <section id="projects" className="text-primary body-font font-roboto">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
         <div className="flex flex-col w-full mb-20">
-          <CodeIcon className="mx-auto inline-block w-10 mb-4 text-primary" />
+          <CodeIcon className="mx-auto inline-block w-10 mb-4 text-darkerSecondary" />
           <h1 className="sm:text-4xl text-3xl font-extrabold title-font mb-4 text-darkerPrimary">
             Projects I've Built
           </h1>
@@ -30,7 +30,7 @@ export default function Projects() {
                   className="absolute inset-0 w-full h-full object-cover"
                   src={project.image}
                 />
-                <div className="relative z-10 w-full h-full border-4 border-primary bg-gray-200 bg-opacity-80 hover:bg-opacity-90 transition duration-300 ease-in-out p-6 rounded-lg shadow-lg opacity-0 hover:opacity-100 flex flex-col justify-center items-center">
+                <div className="relative w-full h-full border-4 border-primary bg-gray-200 bg-opacity-80 hover:bg-opacity-90 transition duration-300 ease-in-out p-6 rounded-lg shadow-lg opacity-0 hover:opacity-100 flex flex-col justify-center items-center">
                   <h2 className="text-xs font-semibold tracking-wider text-gray-700 mb-4 uppercase">
                     {project.subtitle}
                   </h2>
