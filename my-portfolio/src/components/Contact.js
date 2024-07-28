@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Contact() {
   const [name, setName] = React.useState("");
@@ -111,6 +112,17 @@ export default function Contact() {
               Submit
           </button>
         </form>
+      </div>
+      <div className="flex flex-col items-center mt-6 pb-6">
+        <p className="leading-relaxed text-secondary mb-6">You can also find me on these platforms:</p>
+        <div className="flex">
+        <a href="https://www.linkedin.com/in/alina-teodora-brinzac/" className="text-primary mx-2 pr-6">
+          <FaLinkedin size={40} />
+        </a>
+        <a href="https://github.com/TeodoraAlina" className="text-primary mx-2">
+          <FaGithub size={40} />
+        </a>
+        </div>
       </div>
     </section>
   );
