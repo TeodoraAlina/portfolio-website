@@ -1,34 +1,13 @@
 import React from 'react';
-import { useSpring, useSprings, animated } from '@react-spring/web';
-import { useInView } from 'react-intersection-observer';
-import { projects } from '../data/data';
+import { animated } from '@react-spring/web';
 import { CodeIcon } from '@heroicons/react/solid';
+import { projects } from '../data/data';
+import useItemAnimations from '../hooks/useItemAnimations';
+import useHeaderAnimation from '../hooks/useHeaderAnimation';
 
 export default function Projects() {
-  const [headerRef, headerInView] = useInView({ triggerOnce: true });
-  const [projectsRef, projectsInView] = useInView({ triggerOnce: true });
-
-  const headerAnimation = useSpring({
-    from: { transform: 'translateX(-100%)', opacity: 0 },
-    to: {
-      transform: headerInView ? 'translateX(0%)' : 'translateX(-100%)',
-      opacity: headerInView ? 1 : 0,
-    },
-    config: { duration: 1000 },
-  });
-
-  const projectAnimations = useSprings(
-    projects.length,
-    projects.map((_, i) => ({
-      from: { transform: 'translateX(100%)', opacity: 0 },
-      to: {
-        transform: projectsInView ? 'translateX(0%)' : 'translateX(100%)',
-        opacity: projectsInView ? 1 : 0,
-      },
-      delay: projectsInView ? i * 400 : 0,
-      config: { duration: 1000 },
-    }))
-  );
+  const { headerRef, headerAnimation } = useHeaderAnimation();
+  const { itemsRef, itemAnimations } = useItemAnimations(projects);
 
   return (
     <section id="projects" className="text-primary body-font font-roboto">
@@ -45,8 +24,8 @@ export default function Projects() {
             Each project reflects my diverse skills and evolving expertise.
           </p>
         </animated.div>
-        <div ref={projectsRef} className="flex flex-wrap m-4">
-          {projectAnimations.map((style, index) => (
+        <div ref={itemsRef} className="flex flex-wrap m-4">
+          {itemAnimations.map((style, index) => (
             <animated.a
               href={projects[index].link}
               key={projects[index].image}
