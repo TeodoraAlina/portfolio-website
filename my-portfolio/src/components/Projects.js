@@ -1,12 +1,24 @@
 import React from 'react';
+import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
 import { projects } from '../data/data';
 import { CodeIcon } from '@heroicons/react/solid';
 
 export default function Projects() {
+  const [ref, inView] = useInView({ triggerOnce: true });
+  const headerAnimation = useSpring({
+    from: { transform: 'translateX(-100%)', opacity: 0 },
+    to: {
+      transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
+      opacity: inView ? 1 : 0,
+    },
+    config: { duration: 1000 },
+  });
+
   return (
     <section id="projects" className="text-primary body-font font-roboto">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
+        <animated.div ref={ref} style={headerAnimation} className="flex flex-col w-full mb-20">
           <CodeIcon className="mx-auto inline-block w-10 mb-4 text-darkerSecondary" />
           <h1 className="sm:text-4xl text-3xl font-extrabold title-font mb-4 text-darkerPrimary">
             Projects I've Built
@@ -17,7 +29,7 @@ export default function Projects() {
             like "Smells Like Vacay" for vacation packing and "Cool the Earth" for environmental awareness.
             Each project reflects my diverse skills and evolving expertise.
           </p>
-        </div>
+        </animated.div>
         <div className="flex flex-wrap m-4">
           {projects.map((project) => (
             <a
