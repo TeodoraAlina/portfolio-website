@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex justify-between w-full md:w-auto items-center">
           <a 
             href="#about" 
-            className="title-font font-medium text-textPrimary mb-4 md:mb-0 ml-3 text-2xl" 
+            className="title-font font-medium text-textPrimary mb-0 text-2xl" 
             aria-label="About Alina Teodora Brinzac">
             Alina Teodora Brinzac
           </a>
@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
         <nav className={`md:flex flex-grow items-center text-textPrimary ${isOpen ? 'block' : 'hidden'} md:block`}>
           <div className="flex flex-col md:flex-row md:mr-auto md:ml-4 md:pl-6 md:border-l-2 md:border-accent md:space-x-5 space-y-2 md:space-y-0">
-            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale">
+            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale md:mt-0 mt-4">
               Past Work
             </a>
             <a href="#skills" className="hover:text-textHover transition duration-300 ease-in-out hover-scale">
