@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@formspree/react": "^2.5.1",
     "@heroicons/react": "^1.0.6",
     "@react-spring/web": "^9.7.4",
     "@testing-library/jest-dom": "^5.17.0",
