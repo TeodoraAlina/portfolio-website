@@ -40,7 +40,8 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="leading-relaxed mb-6 text-secondary">
-            If you're interested in working with me, let's talk! I'm excited to explore new opportunities.
+            If you're interested in working with me, let's talk!
+            I'm excited to explore new opportunities.
           </p>
           <ContactForm />
         </div>
