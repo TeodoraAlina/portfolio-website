@@ -1,27 +1,25 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  function onSubmit(data) {
+    fetch(process.env.REACT_APP_FORMSPREE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ ...data }),
+    })
+      .then(() => alert("Message sent!"))
+      .catch((error) => alert("Error: " + error));
+  }
 
   function encode(data) {
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       ).join("&");
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
   }
 
   return (
@@ -56,9 +54,7 @@ export default function Contact() {
           </div>
         </div>
         <form
-          netlify
-          name="contact"
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 bg-darkerSecondary shadow-lg rounded-lg p-8"
         >
           <h2 className="text-primary text-3xl mb-4 font-semibold title-font">
@@ -75,11 +71,11 @@ export default function Contact() {
             <input
               type="text"
               id="name"
-              name="name"
+              {...register("name", { required: "Name is required" })}
               className="w-full bg-gray-100 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
               placeholder="Your Name"
             />
+            {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
           </div>
           <div className="relative mb-6">
             <label htmlFor="email" className="leading-7 text-sm text-secondary">
@@ -88,11 +84,11 @@ export default function Contact() {
             <input
               type="email"
               id="email"
-              name="email"
+              {...register("email", { required: "Email is required" })}
               className="w-full bg-gray-100 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
             />
+            {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
           </div>
           <div className="relative mb-6">
             <label htmlFor="message" className="leading-7 text-sm text-secondary">
@@ -100,11 +96,11 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              name="message"
+              {...register("message", { required: "Message is required" })}
               className="w-full bg-gray-100 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary h-32 text-base outline-none text-gray-800 py-2 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
               placeholder="Your Message"
             />
+            {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
           </div>
           <button
             type="submit"
@@ -116,12 +112,12 @@ export default function Contact() {
       <div className="flex flex-col items-center mt-6 pb-6">
         <p className="leading-relaxed text-darkerSecondary mb-6">You can also find me on these platforms:</p>
         <div className="flex">
-        <a href="https://www.linkedin.com/in/alina-teodora-brinzac/" className="text-darkerPrimary mx-2 pr-6">
-          <FaLinkedin size={40} />
-        </a>
-        <a href="https://github.com/TeodoraAlina" className="text-darkerPrimary mx-2">
-          <FaGithub size={40} />
-        </a>
+          <a href="https://www.linkedin.com/in/alina-teodora-brinzac/" className="text-darkerPrimary mx-2 pr-6">
+            <FaLinkedin size={40} />
+          </a>
+          <a href="https://github.com/TeodoraAlina" className="text-darkerPrimary mx-2">
+            <FaGithub size={40} />
+          </a>
         </div>
       </div>
     </section>
