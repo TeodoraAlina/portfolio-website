@@ -17,6 +17,7 @@ function ContactForm() {
           name="name"
           className="w-full bg-gray-100 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out"
           placeholder="Your Name"
+          required
         />
         <ValidationError 
           prefix="Name" 
@@ -34,6 +35,7 @@ function ContactForm() {
           name="email"
           className="w-full bg-gray-100 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out"
           placeholder="Your Email"
+          required
         />
         <ValidationError 
           prefix="Email" 
@@ -50,6 +52,7 @@ function ContactForm() {
           name="message"
           className="w-full bg-gray-100 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary h-32 text-base outline-none text-gray-800 py-2 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out"
           placeholder="Your Message"
+          required
         />
         <ValidationError 
           prefix="Message" 
@@ -62,7 +65,7 @@ function ContactForm() {
         disabled={state.submitting}
         className="text-darkerSecondary bg-primary border-0 py-3 px-6 focus:outline-none hover:bg-teal-700 rounded-lg text-lg font-medium transition-colors duration-200 ease-in-out"
       >
-        Submit
+        {state.submitting ? 'Sending...' : 'Submit'}
       </button>
     </form>
   );
