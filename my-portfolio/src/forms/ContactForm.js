@@ -5,6 +5,13 @@ function ContactForm() {
   const formId = process.env.REACT_APP_FORMSPREE_ID;
   const [state, handleSubmit] = useForm(formId);
   const [errors, setErrors] = useState({});
+  const validateField = (name, value) => {
+    let error;
+    if (!value) {
+      error = `${name} is required`;
+    }
+    return error;
+  };
 
   const validateForm = (event) => {
     const { name, email, message } = event.target.elements;
@@ -25,6 +32,14 @@ function ContactForm() {
     }
   };
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setErrors(prevErrors => ({
+      ...prevErrors,
+      [name]: validateField(name.charAt(0).toUpperCase() + name.slice(1), value)
+    }));
+  };
+
   return (
     <form onSubmit={onSubmit} className="flex flex-col">
       <div className="relative mb-6">
@@ -38,6 +53,7 @@ function ContactForm() {
           aria-label="Name"
           className={`contact-input w-full bg-gray-100 rounded border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out`}
           placeholder="Your Name"
+          onChange={handleChange}
         />
         <ValidationError 
           prefix="Name" 
@@ -58,6 +74,7 @@ function ContactForm() {
           aria-label="Email"
           className={`contact-input w-full bg-gray-100 rounded border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out`}
           placeholder="Your Email"
+          onChange={handleChange}
         />
         <ValidationError 
           prefix="Email" 
@@ -77,6 +94,7 @@ function ContactForm() {
           aria-label="Message"
           className={`contact-input w-full bg-gray-100 rounded border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:border-primary focus:ring-2 focus:ring-primary h-32 text-base outline-none text-gray-800 py-2 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out`}
           placeholder="Your Message"
+          onChange={handleChange}
         />
         <ValidationError 
           prefix="Message" 
