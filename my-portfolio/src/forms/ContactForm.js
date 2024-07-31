@@ -5,6 +5,8 @@ function ContactForm() {
   const formId = process.env.REACT_APP_FORMSPREE_ID;
   const [state, handleSubmit] = useForm(formId);
   const [errors, setErrors] = useState({});
+  const [formValues, setFormValues] = useState({ name: '', email: '', message: '' });
+
   const validateField = (name, value) => {
     let error;
     if (!value) {
@@ -26,7 +28,9 @@ function ContactForm() {
     event.preventDefault();
     const formErrors = validateForm(event);
     if (Object.keys(formErrors).length === 0) {
-      handleSubmit(event);
+      handleSubmit(event).then(() => {
+        setFormValues({ name: '', email: '', message: '' });
+      });
     } else {
       setErrors(formErrors);
     }
@@ -34,6 +38,10 @@ function ContactForm() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
     setErrors(prevErrors => ({
       ...prevErrors,
       [name]: validateField(name.charAt(0).toUpperCase() + name.slice(1), value)
@@ -51,6 +59,7 @@ function ContactForm() {
           type="text"
           name="name"
           aria-label="Name"
+          value={formValues.name}
           className={`contact-input w-full bg-gray-100 rounded border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out`}
           placeholder="Your Name"
           onChange={handleChange}
@@ -72,6 +81,7 @@ function ContactForm() {
           type="email"
           name="email"
           aria-label="Email"
+          value={formValues.email}
           className={`contact-input w-full bg-gray-100 rounded border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-gray-800 py-2 px-4 transition-colors duration-200 ease-in-out`}
           placeholder="Your Email"
           onChange={handleChange}
@@ -92,6 +102,7 @@ function ContactForm() {
           id="message"
           name="message"
           aria-label="Message"
+          value={formValues.message}
           className={`contact-input w-full bg-gray-100 rounded border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:border-primary focus:ring-2 focus:ring-primary h-32 text-base outline-none text-gray-800 py-2 px-4 resize-none leading-6 transition-colors duration-200 ease-in-out`}
           placeholder="Your Message"
           onChange={handleChange}
