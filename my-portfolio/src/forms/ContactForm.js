@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { CheckCircleIcon } from '@heroicons/react/solid';
 
 function ContactForm() {
   const formId = process.env.REACT_APP_FORMSPREE_ID;
   const [state, handleSubmit] = useForm(formId);
   const [errors, setErrors] = useState({});
   const [formValues, setFormValues] = useState({ name: '', email: '', message: '' });
+  const [buttonText, setButtonText] = useState('Submit');
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const validateField = (name, value) => {
     let error;
@@ -30,6 +33,12 @@ function ContactForm() {
     if (Object.keys(formErrors).length === 0) {
       handleSubmit(event).then(() => {
         setFormValues({ name: '', email: '', message: '' });
+        setButtonText('Submitted');
+        setShowSuccessMessage(true);
+        setTimeout(() => {
+          setButtonText('Submit');
+          setShowSuccessMessage(false);
+        }, 3000);
       });
     } else {
       setErrors(formErrors);
@@ -118,11 +127,24 @@ function ContactForm() {
       <button 
         type="submit" 
         disabled={state.submitting}
-        className="text-darkerSecondary bg-primary border-0 py-3 px-6 focus:outline-none hover:bg-teal-700 rounded-lg text-lg font-medium transition-colors duration-200 ease-in-out"
+        className="flex items-center justify-center text-darkerSecondary bg-primary border-0 py-3 px-6 focus:outline-none hover:bg-teal-700 rounded-lg text-lg font-medium transition-colors duration-200 ease-in-out"
       >
-        {state.submitting ? 'Submitting...' : 'Submit'}
+        {buttonText === 'Submitted' ? (
+          <>
+            <CheckCircleIcon className="h-5 w-5 text-darkerSecondary mr-2" />
+            <span>Submitted</span>
+          </>
+        ) : state.submitting ? (
+          'Submitting...'
+        ) : (
+          'Submit'
+        )}
       </button>
-      {state.succeeded && <p className="text-secondary mt-4">Thank you for your message! I will get back to you soon.</p>}
+      {showSuccessMessage && (
+        <div className="flex items-center mt-4 text-secondary">
+          <p>Thank you for your message! I will get back to you soon.</p>
+        </div>
+      )}
     </form>
   );
 }
