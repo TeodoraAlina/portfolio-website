@@ -26,11 +26,11 @@ export default function Projects() {
         </animated.div>
         <div ref={itemsRef} className="flex flex-wrap m-4">
           {itemAnimations.map((style, index) => (
-            <animated.a
-              href={projects[index].link}
+            <animated.div
+              onClick={() => window.location.href = projects[index].link}
               key={projects[index].image}
               style={style}
-              className="sm:w-1/2 w-full p-4"
+              className="sm:w-1/2 w-full p-4 cursor-pointer"
             >
               <div className="relative h-64 overflow-hidden rounded-lg shadow-lg">
                 <img
@@ -51,12 +51,13 @@ export default function Projects() {
                   <a
                     href={projects[index].github}
                     className="mt-4 px-6 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     Github Repository
                   </a>
                 </div>
               </div>
-            </animated.a>
+            </animated.div>
           ))}
         </div>
       </div>
