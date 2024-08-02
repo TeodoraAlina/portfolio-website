@@ -1,0 +1,51 @@
+{
+    "about": {
+      "greeting": "Hallo, ich bin Alina Teodora.",
+      "role": "Full-Stack-Softwareentwicklerin",
+      "description": "Ich bin leidenschaftlich an Technologie und Problemlösung interessiert. Mein Ziel ist es, nützliche, benutzerfreundliche Anwendungen zu erstellen und qualitativ hochwertige Ergebnisse zu liefern, sei es im Frontend, Backend oder Fullstack.",
+      "contactMe": "Kontaktiere mich",
+      "seeMyProjects": "Sieh meine Projekte"
+    },
+    "contact": {
+      "addressTitle": "ADRESSE",
+      "address": "Innsbruck, Österreich",
+      "emailTitle": "E-MAIL",
+      "email": "alina.teower@gmail.com",
+      "getInTouch": "Kontakt aufnehmen",
+      "contactDescription": "Wenn Sie an einer Zusammenarbeit mit mir interessiert sind, lassen Sie uns sprechen! Ich freue mich darauf, neue Möglichkeiten zu erkunden.",
+      "findMeOn": "Sie finden mich auch auf diesen Plattformen:"
+    },
+    "navbar": {
+      "name": "Alina Teodora Brinzac",
+      "pastWork": "Projekte",
+      "skills": "Fähigkeiten",
+      "getInTouch": "Kontakt"
+    },
+    "projects": {
+      "header": "Projekte, die ich gebaut habe",
+      "description": "Meine Projekte zeigen eine Reihe technischer Fähigkeiten und Kreativität. Von einer statischen HTML- und CSS-Website für eine Psychologin über eine Python-Command-Line-App für die Restaurantlieferung bis hin zu Full-Stack-Anwendungen wie \"Smells Like Vacay\" für das Packen von Urlaub und \"Cool the Earth\" für Umweltbewusstsein. Jedes Projekt spiegelt meine vielfältigen Fähigkeiten und sich entwickelnde Expertise wider.",
+      "data": {
+        "vacay": {
+          "title": "Smells Like Vacay",
+          "description": "Eine Full-Stack-Anwendung, die den Nutzern hilft, effizient für ihren Urlaub zu packen, mit interaktiven Checklisten und Packempfehlungen."
+        },
+        "coolTheEarth": {
+          "title": "Cool the Earth",
+          "description": "Eine Anwendung zur Förderung des Umweltbewusstseins mit Funktionen zur Verfolgung und Reduzierung des persönlichen CO2-Fußabdrucks."
+        },
+        "restaurantDelivery": {
+          "title": "Restaurant Delivery App",
+          "description": "Eine Python-Command-Line-Anwendung zur Verwaltung von Restaurantlieferbestellungen und Logistik."
+        }
+      }
+    },
+    "contactForm": {
+      "nameLabel": "Name",
+      "emailLabel": "E-Mail-Adresse",
+      "messageLabel": "Nachricht",
+      "submit": "Absenden",
+      "submitting": "Wird gesendet...",
+      "submitted": "Abgesendet",
+      "successMessage": "Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden."
+    }
+  }

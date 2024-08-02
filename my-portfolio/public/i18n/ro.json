@@ -1,0 +1,51 @@
+{
+    "about": {
+      "greeting": "Bună, sunt Alina Teodora.",
+      "role": "Full-Stack Software Developer",
+      "description": "Sunt pasionată de tehnologie și rezolvarea problemelor. Îmi propun să creez aplicații utile și prietenoase cu utilizatorii și să livrez rezultate de înaltă calitate, fie că este vorba de frontend, backend sau full-stack.",
+      "contactMe": "Contactează-mă",
+      "seeMyProjects": "Vezi proiectele mele"
+    },
+    "contact": {
+      "addressTitle": "ADRESĂ",
+      "address": "Innsbruck, Austria",
+      "emailTitle": "EMAIL",
+      "email": "alina.teower@gmail.com",
+      "getInTouch": "Contactează-mă",
+      "contactDescription": "Dacă ești interesat să colaborezi cu mine, hai să discutăm! Sunt încântată să explorez noi oportunități.",
+      "findMeOn": "Mă poți găsi și pe aceste platforme:"
+    },
+    "navbar": {
+      "name": "Alina Teodora Brinzac",
+      "pastWork": "Proiecte",
+      "skills": "Abilități",
+      "getInTouch": "Contact"
+    },
+    "projects": {
+      "header": "Proiecte pe care le-am construit",
+      "description": "Proiectele mele evidențiază o gamă variată de abilități tehnice și creativitate. De la un site web static HTML și CSS pentru un psiholog, la o aplicație Python de linie de comandă pentru livrarea restaurantelor și aplicații full-stack precum \"Smells Like Vacay\" pentru împachetarea vacanței și \"Cool the Earth\" pentru conștientizarea mediului. Fiecare proiect reflectă abilitățile mele diverse și expertiza în dezvoltare.",
+      "data": {
+        "vacay": {
+          "title": "Smells Like Vacay",
+          "description": "O aplicație full-stack care ajută utilizatorii să împacheteze eficient pentru vacanțele lor, cu liste de verificare interactive și sugestii de împachetare."
+        },
+        "coolTheEarth": {
+          "title": "Cool the Earth",
+          "description": "O aplicație care promovează conștientizarea mediului, cu funcții pentru urmărirea și reducerea amprentei de carbon personale."
+        },
+        "restaurantDelivery": {
+          "title": "Aplicația de livrare a restaurantului",
+          "description": "O aplicație Python de linie de comandă concepută pentru gestionarea comenzilor și logisticii livrărilor restaurantelor."
+        }
+      }
+    },
+    "contactForm": {
+      "nameLabel": "Nume",
+      "emailLabel": "Adresă de email",
+      "messageLabel": "Mesaj",
+      "submit": "Trimite",
+      "submitting": "Se trimite...",
+      "submitted": "Trimis",
+      "successMessage": "Îți mulțumesc pentru mesaj! Te voi contacta în curând."
+    }
+  }
