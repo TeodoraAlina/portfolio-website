@@ -25,6 +25,10 @@
       "header": "Projekte, die ich gebaut habe",
       "description": "Meine Projekte zeigen eine Reihe technischer Fähigkeiten und Kreativität. Von einer statischen HTML- und CSS-Website für eine Psychologin über eine Python-Command-Line-App für die Restaurantlieferung bis hin zu Full-Stack-Anwendungen wie \"Smells Like Vacay\" für das Packen von Urlaub und \"Cool the Earth\" für Umweltbewusstsein. Jedes Projekt spiegelt meine vielfältigen Fähigkeiten und sich entwickelnde Expertise wider.",
       "data": {
+        "climateCircles": {
+          "title": "Climate Circles",
+          "description": "Website für einen Psychologen, der Workshops und Klimakreise veranstaltet"
+        },
         "vacay": {
           "title": "Smells Like Vacay",
           "description": "Eine Full-Stack-Anwendung, die den Nutzern hilft, effizient für ihren Urlaub zu packen, mit interaktiven Checklisten und Packempfehlungen."

@@ -25,6 +25,10 @@
       "header": "Proiecte pe care le-am construit",
       "description": "Proiectele mele evidențiază o gamă variată de abilități tehnice și creativitate. De la un site web static HTML și CSS pentru un psiholog, la o aplicație Python de linie de comandă pentru livrarea restaurantelor și aplicații full-stack precum \"Smells Like Vacay\" pentru împachetarea vacanței și \"Cool the Earth\" pentru conștientizarea mediului. Fiecare proiect reflectă abilitățile mele diverse și expertiza în dezvoltare.",
       "data": {
+        "climateCircles": {
+          "title": "Climate Circles",
+          "description": "Site web pentru un psiholog care organizează ateliere și cercuri climatice"
+        },
         "vacay": {
           "title": "Smells Like Vacay",
           "description": "O aplicație full-stack care ajută utilizatorii să împacheteze eficient pentru vacanțele lor, cu liste de verificare interactive și sugestii de împachetare."
