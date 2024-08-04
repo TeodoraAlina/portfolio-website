@@ -7,12 +7,12 @@
       "seeMyProjects": "Meine Projekte"
     },
     "contact": {
-      "addressTitle": "ADRESSE",
-      "address": "Innsbruck, Österreich",
-      "emailTitle": "E-MAIL",
-      "email": "alina.teower@gmail.com",
+      "map": "Karte",
+      "address": "ADRESSE",
+      "email": "E-MAIL",
+      "location": "Innsbruck, Österreich",
       "getInTouch": "Kontakt aufnehmen",
-      "contactDescription": "Wenn Sie an einer Zusammenarbeit mit mir interessiert sind, lassen Sie uns sprechen! Ich freue mich darauf, neue Möglichkeiten zu erkunden.",
+      "description": "Wenn Sie an einer Zusammenarbeit mit mir interessiert sind, lassen Sie uns sprechen! Ich freue mich darauf, neue Möglichkeiten zu erkunden.",
       "findMeOn": "Sie finden mich auch auf diesen Plattformen:"
     },
     "navbar": {
@@ -54,6 +54,9 @@
       "submit": "Absenden",
       "submitting": "Wird gesendet...",
       "submitted": "Abgesendet",
-      "successMessage": "Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden."
+      "successMessage": "Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden.",
+      "nameRequired": "Name ist erforderlich",
+      "emailRequired": "E-Mail ist erforderlich",
+      "messageRequired": "Nachricht ist erforderlich"
     }
   }

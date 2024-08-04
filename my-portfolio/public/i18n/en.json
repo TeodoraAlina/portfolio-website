@@ -7,12 +7,12 @@
       "seeMyProjects": "See My Projects"
     },
     "contact": {
-      "addressTitle": "ADDRESS",
-      "address": "Innsbruck, Austria",
-      "emailTitle": "EMAIL",
-      "email": "alina.teower@gmail.com",
+      "map": "map",
+      "address": "ADDRESS",
+      "email": "EMAIL",
+      "location": "Innsbruck, Austria",
       "getInTouch": "Get in Touch",
-      "contactDescription": "If you're interested in working with me, let's talk! I'm excited to explore new opportunities.",
+      "description": "If you're interested in working with me, let's talk! I'm excited to explore new opportunities.",
       "findMeOn": "You can also find me on these platforms:"
     },
     "navbar": {
@@ -54,6 +54,9 @@
       "submit": "Submit",
       "submitting": "Submitting...",
       "submitted": "Submitted",
-      "successMessage": "Thank you for your message! I will get back to you soon."
+      "successMessage": "Thank you for your message! I will get back to you soon.",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "messageRequired": "Message is required"
     }
 }
