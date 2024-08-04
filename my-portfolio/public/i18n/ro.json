@@ -43,6 +43,10 @@
         }
       }
     },
+    "skills": {
+      "header": "Competențe & Tehnologii",
+      "description": "Sunt pricepută în utilizarea unei game variate de tehnologii moderne pentru a construi aplicații versatile și eficiente."
+    },
     "contactForm": {
       "nameLabel": "Nume",
       "emailLabel": "Adresă de email",

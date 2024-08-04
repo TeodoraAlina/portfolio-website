@@ -52,7 +52,7 @@ export default function Projects() {
                     className="mt-4 px-6 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    {t('projects.githubRepository')}
+                    Github Repository
                   </a>
                 </div>
               </div>

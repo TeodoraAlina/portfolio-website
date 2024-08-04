@@ -43,6 +43,10 @@
         }
       }
     },
+    "skills": {
+      "header": "Skills & Technologies",
+      "description": "I'm adept at using a range of modern technologies to build versatile and efficient applications."
+    },
     "contactForm": {
       "nameLabel": "Name",
       "emailLabel": "Email Address",

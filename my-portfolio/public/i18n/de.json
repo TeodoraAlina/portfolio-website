@@ -43,6 +43,10 @@
         }
       }
     },
+    "skills": {
+      "header": "Fähigkeiten & Technologien",
+      "description": "Ich bin darin versiert, eine Vielzahl moderner Technologien zu nutzen, um vielseitige und effiziente Anwendungen zu erstellen."
+    },
     "contactForm": {
       "nameLabel": "Name",
       "emailLabel": "E-Mail-Adresse",
