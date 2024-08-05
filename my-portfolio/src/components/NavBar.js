@@ -24,6 +24,9 @@ export default function Navbar() {
           </a>
           <div className="flex items-center md:hidden">
             <ThemeToggle />
+            <div className="ml-2">
+              <LanguageSwitcher />
+            </div>
             <button 
               className="inline-flex items-center text-textPrimary focus:outline-none ml-2" 
               onClick={toggleMenu} 
@@ -51,7 +54,9 @@ export default function Navbar() {
               {t('navbar.getInTouch')}
               <ArrowRightIcon className="w-4 h-4 ml-1 animate-arrow" />
             </a>
-            <LanguageSwitcher />
+            <div className="hidden md:inline-flex ml-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </nav>
       </div>
