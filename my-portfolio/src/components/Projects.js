@@ -12,7 +12,7 @@ export default function Projects() {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="text-primary body-font font-roboto">
+    <section id="projects" className="text-primary body-font font-roboto overflow-hidden">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
         <animated.div ref={headerRef} style={headerAnimation} className="flex flex-col w-full mb-20">
           <CodeIcon className="mx-auto inline-block w-10 mb-4 text-darkerSecondary" />

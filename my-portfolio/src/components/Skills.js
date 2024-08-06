@@ -12,7 +12,7 @@ export default function Skills() {
   const { t } = useTranslation()
 
   return (
-    <section id="skills" className="body-font font-roboto bg-accent">
+    <section id="skills" className="body-font font-roboto bg-accent overflow-hidden">
       <div className="container px-5 py-10 mx-auto">
         <animated.div ref={headerRef} style={headerAnimation} className="text-center mb-20">
           <ChipIcon className="w-10 inline-block mb-4 text-darkerSecondary" />
