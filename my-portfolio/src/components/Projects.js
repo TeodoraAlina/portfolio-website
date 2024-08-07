@@ -23,33 +23,33 @@ export default function Projects() {
             {t('projects.description')}
           </p>
         </animated.div>
-        <div ref={itemsRef} className="flex flex-wrap m-4">
+        <div ref={itemsRef} className="flex flex-wrap -m-4">
           {itemAnimations.map((style, index) => (
             <animated.div
               onClick={() => window.location.href = projects[index].link}
               key={projects[index].key}
               style={style}
-              className="sm:w-1/2 w-full p-4 cursor-pointer"
+              className="sm:w-1/2 w-full p-4 cursor-pointer flex flex-col"
             >
-              <div className="relative h-64 overflow-hidden rounded-lg shadow-lg">
+              <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
                 <img
                   alt="gallery"
                   className="absolute inset-0 w-full h-full object-cover"
                   src={projects[index].image}
                 />
-                <div className="relative w-full h-full border-4 border-primary bg-gray-200 bg-opacity-80 hover:bg-opacity-90 transition duration-300 ease-in-out p-6 rounded-lg shadow-lg opacity-0 hover:opacity-100 flex flex-col justify-center items-center">
+                <div className="absolute inset-0 bg-gray-200 bg-opacity-0 hover:bg-opacity-90 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100">
                   <h2 className="text-xs font-semibold tracking-wider text-gray-700 mb-4 uppercase">
                     {projects[index].subtitle}
                   </h2>
                   <h1 className="text-xl font-bold text-darkerPrimary mb-4">
                     {t(`projects.data.${projects[index].key}.title`)}
                   </h1>
-                  <p className="text-gray-600 leading-relaxed text-center">
+                  <p className="text-gray-600 leading-relaxed mb-4">
                     {t(`projects.data.${projects[index].key}.description`)}
                   </p>
                   <a
                     href={projects[index].github}
-                    className="mt-4 px-6 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded"
+                    className="mt-4 px-4 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded text-sm"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Github Repository
