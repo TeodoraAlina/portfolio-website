@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import { ThemeProvider } from './context/ThemeContext';
 import BackToTop from './components/BackToTop';
+import CollaborativeProjects from './components/CollaborativeProjects';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <NavBar />
           <About />
           <Projects />
+          <CollaborativeProjects />
           <Skills />
           <Contact />
           <BackToTop />
