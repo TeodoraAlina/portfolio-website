@@ -1,62 +1,84 @@
 {
-    "about": {
-      "greeting": "Hi, I'm Alina Teodora.",
-      "role": "Full-Stack Software Developer",
-      "description": "I'm passionate about technology and problem-solving. I aim to create useful, user-friendly applications and deliver high-quality results, whether it's on the frontend, backend, or full-stack.",
-      "contactMe": "Contact Me",
-      "seeMyProjects": "See My Projects"
-    },
-    "contact": {
-      "map": "map",
-      "address": "ADDRESS",
-      "email": "EMAIL",
-      "location": "Innsbruck, Austria",
-      "getInTouch": "Get in Touch",
-      "description": "If you're interested in working with me, let's talk! I'm excited to explore new opportunities.",
-      "findMeOn": "You can also find me on these platforms:"
-    },
-    "navbar": {
-      "name": "Alina Teodora Brinzac",
-      "pastWork": "Past Work",
-      "skills": "Skills",
-      "getInTouch": "Get in Touch"
-    },
-    "projects": {
-      "header": "Projects I've Built",
-      "description": "My projects highlight a range of technical skills and creativity. From a static HTML and CSS website for a psychologist, to a Python command line app for restaurant delivery, and full-stack applications like 'Smells Like Vacay' for vacation packing and 'Cool the Earth' for environmental awareness. Each project reflects my diverse skills and evolving expertise.",
-      "data": {
-        "climateCircles": {
-          "title": "Climate Circles",
-          "description": "Website for a psychologist that hosts workshops and climate circles"
-        },
-        "vacay": {
-          "title": "Smells Like Vacay",
-          "description": "A full-stack application to help users pack efficiently for their vacations, featuring interactive checklists and packing suggestions."
-        },
-        "coolTheEarth": {
-          "title": "Cool the Earth",
-          "description": "An application promoting environmental awareness with features for tracking and reducing personal carbon footprints."
-        },
-        "restaurantDelivery": {
-          "title": "Restaurant Delivery App",
-          "description": "A Python command-line application designed for managing restaurant delivery orders and logistics."
-        }
+  "about": {
+    "greeting": "Hi, I'm Alina Teodora.",
+    "role": "Full-Stack Software Developer",
+    "description": "I'm passionate about technology and problem-solving. I aim to create useful, user-friendly applications and deliver high-quality results, whether it's on the frontend, backend, or full-stack.",
+    "contactMe": "Contact Me",
+    "seeMyProjects": "See My Projects"
+  },
+  "contact": {
+    "map": "map",
+    "address": "ADDRESS",
+    "email": "EMAIL",
+    "location": "Innsbruck, Austria",
+    "getInTouch": "Get in Touch",
+    "description": "If you're interested in working with me, let's talk! I'm excited to explore new opportunities.",
+    "findMeOn": "You can also find me on these platforms:"
+  },
+  "navbar": {
+    "name": "Alina Teodora Brinzac",
+    "pastWork": "Past Work",
+    "skills": "Skills",
+    "getInTouch": "Get in Touch"
+  },
+  "projects": {
+    "header": "Projects I've Built",
+    "description": "My projects highlight a range of technical skills and creativity. From a static HTML and CSS website for a psychologist, to a Python command line app for restaurant delivery, and full-stack applications like 'Smells Like Vacay' for vacation packing and 'Cool the Earth' for environmental awareness. Each project reflects my diverse skills and evolving expertise.",
+    "data": {
+      "climateCircles": {
+        "title": "Climate Circles",
+        "description": "Website for a psychologist that hosts workshops and climate circles"
+      },
+      "vacay": {
+        "title": "Smells Like Vacay",
+        "description": "A full-stack application to help users pack efficiently for their vacations, featuring interactive checklists and packing suggestions."
+      },
+      "coolTheEarth": {
+        "title": "Cool the Earth",
+        "description": "An application promoting environmental awareness with features for tracking and reducing personal carbon footprints."
+      },
+      "restaurantDelivery": {
+        "title": "Pasta la Vista",
+        "description": "A Python command-line application designed for managing restaurant delivery orders and logistics."
       }
-    },
-    "skills": {
-      "header": "Skills & Technologies",
-      "description": "I'm adept at using a range of modern technologies to build versatile and efficient applications."
-    },
-    "contactForm": {
-      "nameLabel": "Name",
-      "emailLabel": "Email Address",
-      "messageLabel": "Message",
-      "submit": "Submit",
-      "submitting": "Submitting...",
-      "submitted": "Submitted",
-      "successMessage": "Thank you for your message! I will get back to you soon.",
-      "nameRequired": "Name is required",
-      "emailRequired": "Email is required",
-      "messageRequired": "Message is required"
     }
+  },
+  "skills": {
+    "header": "Skills & Technologies",
+    "description": "I'm adept at using a range of modern technologies to build versatile and efficient applications."
+  },
+  "contactForm": {
+    "nameLabel": "Name",
+    "emailLabel": "Email Address",
+    "messageLabel": "Message",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "submitted": "Submitted",
+    "successMessage": "Thank you for your message! I will get back to you soon.",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "messageRequired": "Message is required"
+  },
+  "collaborativeProjects": {
+    "header": "Collaborative Projects",
+    "description": "My collaborative projects demonstrate my ability to work effectively in a team environment using Agile methodologies. Through these projects, I gained hands-on experience with Git commands, conflict resolution, pull requests, and merging. Working alongside team members, I contributed to building innovative solutions and learned the importance of communication and teamwork in achieving project goals. All collaborative projects were completed during 5-day hackathons organized by Code Institute.",
+    "data": {
+      "theLoversBlog": {
+        "title": "The Lovers Blog",
+        "description": "The lovers Blog is a hackathon project created by the Cupid-Devils. The project is designed with a valentines day theme with the purpose of allowing users to create post to aid others for a better love life."
+      },
+      "happyHacks": {
+        "title": "Happy Hacks",
+        "description": "HAPPY HACKS is a place where users can receive inspirational 'Happy Hacks', that they can use to motivate and guide themselves towards happiness, with advice from others. The home page invites users to click a button to receive a random 'hack', generated by other users. Users can create their own hacks by completing a form and attach an emoji to the post, sharing their own tips for the benefit of others. Users can 'love' hacks in order to interact with other users. The text and associated emojis assist users in being able to filter posts for themed suggestions that are relevant to them."
+      },
+      "neuroSisters": {
+        "title": "Neuro Sisters",
+        "description": "A website where women who are mothers or female carers of neuro divergent adult children can find out about support and resources for their own mental and physical health. The site has login functionality and once logged in users can see posts from others regarding suggestions on how to maintain and enhance their mental and physical health. All users also have a profile page. This theme was chosen as although there are many support groups and resources for carers of neuro-divergent children, there aren't many groups or resources for carers of neuro divergent adults."
+      },
+      "starQuiz": {
+        "title": "Star Quiz",
+        "description": "For Code Institue 's May Hackathon theme, Star Wars team Jedi Juggernauts has created a Star Wars quiz that takes you through a journey of planets visited by Luke Skywalker."
+      }
+    }
+  }
 }

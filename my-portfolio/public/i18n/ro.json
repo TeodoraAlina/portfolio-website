@@ -1,62 +1,84 @@
 {
-    "about": {
-      "greeting": "Bună, sunt Alina Teodora.",
-      "role": "Full-Stack Software Developer",
-      "description": "Sunt pasionată de tehnologie și rezolvarea problemelor. Îmi propun să creez aplicații utile și prietenoase cu utilizatorii și să livrez rezultate de înaltă calitate, fie că este vorba de frontend, backend sau full-stack.",
-      "contactMe": "Contactează-mă",
-      "seeMyProjects": "Proiectele mele"
-    },
-    "contact": {
-      "map" : "hartă",
-      "address": "ADRESĂ",
-      "email": "EMAIL",
-      "location": "Innsbruck, Austria",
-      "getInTouch": "Contactează-mă",
-      "description": "Dacă ești interesat să colaborezi cu mine, hai să discutăm! Sunt încântată să explorez noi oportunități.",
-      "findMeOn": "Mă poți găsi și pe aceste platforme:"
-    },
-    "navbar": {
-      "name": "Alina Teodora Brinzac",
-      "pastWork": "Proiecte",
-      "skills": "Abilități",
-      "getInTouch": "Contact"
-    },
-    "projects": {
-      "header": "Proiecte pe care le-am construit",
-      "description": "Proiectele mele evidențiază o gamă variată de abilități tehnice și creativitate. De la un site web static HTML și CSS pentru un psiholog, la o aplicație Python de linie de comandă pentru livrarea restaurantelor și aplicații full-stack precum \"Smells Like Vacay\" pentru împachetarea vacanței și \"Cool the Earth\" pentru conștientizarea mediului. Fiecare proiect reflectă abilitățile mele diverse și expertiza în dezvoltare.",
-      "data": {
-        "climateCircles": {
-          "title": "Climate Circles",
-          "description": "Site web pentru un psiholog care organizează ateliere și cercuri climatice"
-        },
-        "vacay": {
-          "title": "Smells Like Vacay",
-          "description": "O aplicație full-stack care ajută utilizatorii să împacheteze eficient pentru vacanțele lor, cu liste de verificare interactive și sugestii de împachetare."
-        },
-        "coolTheEarth": {
-          "title": "Cool the Earth",
-          "description": "O aplicație care promovează conștientizarea mediului, cu funcții pentru urmărirea și reducerea amprentei de carbon personale."
-        },
-        "restaurantDelivery": {
-          "title": "Aplicația de livrare a restaurantului",
-          "description": "O aplicație Python de linie de comandă concepută pentru gestionarea comenzilor și logisticii livrărilor restaurantelor."
-        }
+  "about": {
+    "greeting": "Bună, sunt Alina Teodora.",
+    "role": "Full-Stack Software Developer",
+    "description": "Sunt pasionată de tehnologie și rezolvarea problemelor. Îmi propun să creez aplicații utile și prietenoase cu utilizatorii și să livrez rezultate de înaltă calitate, fie că este vorba de frontend, backend sau full-stack.",
+    "contactMe": "Contactează-mă",
+    "seeMyProjects": "Proiectele mele"
+  },
+  "contact": {
+    "map" : "hartă",
+    "address": "ADRESĂ",
+    "email": "EMAIL",
+    "location": "Innsbruck, Austria",
+    "getInTouch": "Contactează-mă",
+    "description": "Dacă ești interesat să colaborezi cu mine, hai să discutăm! Sunt încântată să explorez noi oportunități.",
+    "findMeOn": "Mă poți găsi și pe aceste platforme:"
+  },
+  "navbar": {
+    "name": "Alina Teodora Brinzac",
+    "pastWork": "Proiecte",
+    "skills": "Abilități",
+    "getInTouch": "Contact"
+  },
+  "projects": {
+    "header": "Proiecte pe care le-am construit",
+    "description": "Proiectele mele evidențiază o gamă largă de abilități tehnice și creativitate. De la un site static HTML și CSS pentru un psiholog, la o aplicație de linie de comandă Python pentru livrarea de mâncare și aplicații full-stack precum 'Smells Like Vacay' pentru organizarea bagajelor de vacanță și 'Cool the Earth' pentru conștientizarea mediului. Fiecare proiect reflectă abilitățile mele diverse și expertiza în .",
+    "data": {
+      "climateCircles": {
+        "title": "Climate Circles",
+        "description": "Site pentru un psiholog care organizează ateliere și cercuri climatice."
+      },
+      "vacay": {
+        "title": "Smells Like Vacay",
+        "description": "O aplicație full-stack care ajută utilizatorii să își organizeze eficient bagajele de vacanță, cu liste de verificare interactive și recomandări de împachetare."
+      },
+      "coolTheEarth": {
+        "title": "Cool the Earth",
+        "description": "O aplicație pentru promovarea conștientizării mediului, cu funcții de monitorizare și reducere a amprentei personale de carbon."
+      },
+      "restaurantDelivery": {
+        "title": "Pasta la Vista",
+        "description": "O aplicație de linie de comandă Python pentru gestionarea comenzilor și logisticii de livrare de la restaurante."
       }
-    },
-    "skills": {
-      "header": "Competențe & Tehnologii",
-      "description": "Sunt pricepută în utilizarea unei game variate de tehnologii moderne pentru a construi aplicații versatile și eficiente."
-    },
-    "contactForm": {
-      "nameLabel": "Nume",
-      "emailLabel": "Adresă de email",
-      "messageLabel": "Mesaj",
-      "submit": "Trimite",
-      "submitting": "Se trimite...",
-      "submitted": "Trimis",
-      "successMessage": "Îți mulțumesc pentru mesaj! Te voi contacta în curând.",
-      "nameRequired": "Numele este necesar",
-      "emailRequired": "Emailul este necesar",
-      "messageRequired": "Mesajul este necesar"
+    }
+  },
+  "skills": {
+    "header": "Competențe & Tehnologii",
+    "description": "Sunt pricepută în utilizarea unei game variate de tehnologii moderne pentru a construi aplicații versatile și eficiente."
+  },
+  "contactForm": {
+    "nameLabel": "Nume",
+    "emailLabel": "Adresă de e-mail",
+    "messageLabel": "Mesaj",
+    "submit": "Trimite",
+    "submitting": "Se trimite...",
+    "submitted": "Trimis",
+    "successMessage": "Mulțumesc pentru mesaj! Te voi contacta în curând.",
+    "nameRequired": "Numele este obligatoriu",
+    "emailRequired": "E-mailul este obligatoriu",
+    "messageRequired": "Mesajul este obligatoriu"
+  },
+  "collaborativeProjects": {
+    "header": "Proiecte colaborative",
+    "description": "Proiectele mele colaborative demonstrează capacitatea mea de a lucra eficient într-un mediu de echipă folosind metodologii Agile. Prin aceste proiecte, am dobândit experiență practică cu comenzi Git, rezolvarea conflictelor, pull requests și merging. Lucrând alături de membrii echipei, am contribuit la dezvoltarea unor soluții inovatoare și am învățat importanța comunicării și a muncii în echipă pentru atingerea obiectivelor proiectului. Toate proiectele colaborative au fost finalizate în cadrul unor hackathoane de 5 zile organizate de Code Institute.",
+    "data": {
+      "theLoversBlog": {
+        "title": "The Lovers Blog",
+        "description": "The Lovers Blog este un proiect hackathon creat de Cupid-Devils. Proiectul este conceput cu o tematică de Ziua Îndrăgostiților, având scopul de a permite utilizatorilor să creeze postări pentru a-i ajuta pe alții să aibă o viață amoroasă mai bună."
+      },
+      "happyHacks": {
+        "title": "Happy Hacks",
+        "description": "HAPPY HACKS este un loc unde utilizatorii pot primi 'Happy Hacks' inspiraționale, pe care le pot folosi pentru a se motiva și ghida către fericire, cu sfaturi de la alții. Pagina principală invită utilizatorii să apese un buton pentru a primi un 'hack' aleatoriu, generat de alți utilizatori. Utilizatorii își pot crea propriile hacks completând un formular și atașând un emoji postării, împărtășind propriile lor sfaturi în beneficiul altora. Utilizatorii pot 'iubi' hacks pentru a interacționa cu alți utilizatori. Textul și emoji-urile asociate îi ajută pe utilizatori să filtreze postările pentru sugestii tematice relevante pentru ei."
+      },
+      "neuroSisters": {
+        "title": "Neuro Sisters",
+        "description": "Un site unde femeile care sunt mame sau îngrijitoare ale copiilor neurodivergenți adulți pot afla despre suport și resurse pentru propria lor sănătate mentală și fizică. Site-ul are funcționalitate de autentificare, iar odată ce utilizatorii sunt autentificați, pot vedea postări de la alții cu sugestii despre cum să-și mențină și îmbunătățească sănătatea mentală și fizică. Toți utilizatorii au, de asemenea, o pagină de profil. Această temă a fost aleasă deoarece, deși există multe grupuri de suport și resurse pentru îngrijitorii copiilor neurodivergenți, nu sunt multe grupuri sau resurse pentru îngrijitorii adulților neurodivergenți."
+      },
+      "starQuiz": {
+        "title": "Star Quiz",
+        "description": "Pentru tema hackathon-ului Code Institute din luna mai, echipa Star Wars Jedi Juggernauts a creat un quiz Star Wars care te poartă printr-o călătorie pe planetele vizitate de Luke Skywalker."
+      }
     }
   }
+}
