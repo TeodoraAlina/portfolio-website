@@ -33,11 +33,11 @@ export default function CollaborativeProjects() {
             >
               <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
                 <img
-                  alt="gallery"
+                  alt={collaborativeProjects[index].title}
                   className="absolute inset-0 w-full h-full object-cover"
                   src={collaborativeProjects[index].image}
                 />
-                <div className="absolute inset-0 bg-gray-200 bg-opacity-0 hover:bg-opacity-80 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100">
+                <div className="absolute inset-0 bg-gray-200 bg-opacity-0 hover:bg-opacity-90 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100">
                   <h2 className="text-xs font-semibold tracking-wider text-gray-700 mb-4 uppercase">
                     {collaborativeProjects[index].subtitle}
                   </h2>

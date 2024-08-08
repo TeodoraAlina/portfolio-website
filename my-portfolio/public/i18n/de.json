@@ -65,19 +65,19 @@
     "data": {
       "theLoversBlog": {
         "title": "The Lovers Blog",
-        "description": "The Lovers Blog ist ein Hackathon-Projekt, das von den Cupid-Devils erstellt wurde. Das Projekt ist im Valentinstags-Thema gestaltet und soll den Nutzern ermöglichen, Beiträge zu erstellen, um anderen zu einem besseren Liebesleben zu verhelfen."
+        "description": "Ein von Cupid-Devils entwickeltes Hackathon-Projekt im Valentinstag-Thema, das es Nutzern ermöglicht, Tipps für eine bessere Liebesleben zu posten."
       },
       "happyHacks": {
         "title": "Happy Hacks",
-        "description": "HAPPY HACKS ist ein Ort, an dem Benutzer inspirierende 'Happy Hacks' erhalten können, die sie motivieren und ihnen helfen, Glück zu finden, mit Ratschlägen von anderen. Die Startseite lädt die Benutzer ein, auf einen Button zu klicken, um einen zufälligen 'Hack' zu erhalten, der von anderen Benutzern generiert wurde. Benutzer können ihre eigenen Hacks erstellen, indem sie ein Formular ausfüllen und ein Emoji an den Beitrag anhängen, um ihre eigenen Tipps zum Nutzen anderer zu teilen. Benutzer können Hacks 'lieben', um mit anderen Benutzern zu interagieren. Der Text und die zugehörigen Emojis helfen den Benutzern, Beiträge nach Themenvorschlägen zu filtern, die für sie relevant sind."
+        "description": "Happy Hacks bietet motivierende Tipps zur Steigerung der Zufriedenheit. Nutzer können zufällige Tipps ansehen, eigene erstellen und mit anderen Beiträgen interagieren."
       },
       "neuroSisters": {
         "title": "Neuro Sisters",
-        "description": "Eine Website, auf der Frauen, die Mütter oder Betreuerinnen von neurodivergenten erwachsenen Kindern sind, Unterstützung und Ressourcen für ihre eigene geistige und körperliche Gesundheit finden können. Die Website hat eine Login-Funktionalität und sobald die Benutzer eingeloggt sind, können sie Beiträge von anderen sehen, die Vorschläge zur Erhaltung und Verbesserung ihrer geistigen und körperlichen Gesundheit enthalten. Alle Benutzer haben auch eine Profilseite. Dieses Thema wurde gewählt, da es zwar viele Unterstützungsgruppen und Ressourcen für Betreuer von neurodivergenten Kindern gibt, jedoch nicht viele Gruppen oder Ressourcen für Betreuer von neurodivergenten Erwachsenen."
+        "description": "Eine Seite für Frauen, die neurodivergente Erwachsene betreuen, bietet Unterstützung, Ressourcen und eine Gemeinschaft für Gesundheit und Wohlbefinden."
       },
       "starQuiz": {
         "title": "Star Quiz",
-        "description": "Für das Code Institute Mai Hackathon-Thema hat das Star Wars Team Jedi Juggernauts ein Star Wars-Quiz erstellt, das Sie auf eine Reise durch die von Luke Skywalker besuchten Planeten führt."
+        "description": "Ein Star-Wars-Quiz, das Sie durch die Planeten führt, die von Luke Skywalker besucht wurden."
       }
     }
   }

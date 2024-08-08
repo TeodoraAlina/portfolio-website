@@ -23,7 +23,7 @@
   },
   "projects": {
     "header": "Proiecte pe care le-am construit",
-    "description": "Proiectele mele evidențiază o gamă largă de abilități tehnice și creativitate. De la un site static HTML și CSS pentru un psiholog, la o aplicație de linie de comandă Python pentru livrarea de mâncare și aplicații full-stack precum 'Smells Like Vacay' pentru organizarea bagajelor de vacanță și 'Cool the Earth' pentru conștientizarea mediului. Fiecare proiect reflectă abilitățile mele diverse și expertiza în .",
+    "description": "Proiectele mele evidențiază o gamă largă de abilități tehnice și creativitate. De la un site static HTML și CSS pentru un psiholog, la o aplicație de linie de comandă Python pentru livrarea de mâncare și aplicații full-stack precum 'Smells Like Vacay' pentru organizarea bagajelor de vacanță și 'Cool the Earth' pentru conștientizarea mediului. Fiecare proiect reflectă abilitățile mele diverse și expertiza în continuă evoluție.",
     "data": {
       "climateCircles": {
         "title": "Climate Circles",
@@ -65,19 +65,19 @@
     "data": {
       "theLoversBlog": {
         "title": "The Lovers Blog",
-        "description": "The Lovers Blog este un proiect hackathon creat de Cupid-Devils. Proiectul este conceput cu o tematică de Ziua Îndrăgostiților, având scopul de a permite utilizatorilor să creeze postări pentru a-i ajuta pe alții să aibă o viață amoroasă mai bună."
+        "description": "Un proiect de hackathon cu tema Ziua Îndrăgostiților creat de Cupid-Devils, care permite utilizatorilor să posteze sfaturi pentru o viață amorasă mai bună."
       },
       "happyHacks": {
         "title": "Happy Hacks",
-        "description": "HAPPY HACKS este un loc unde utilizatorii pot primi 'Happy Hacks' inspiraționale, pe care le pot folosi pentru a se motiva și ghida către fericire, cu sfaturi de la alții. Pagina principală invită utilizatorii să apese un buton pentru a primi un 'hack' aleatoriu, generat de alți utilizatori. Utilizatorii își pot crea propriile hacks completând un formular și atașând un emoji postării, împărtășind propriile lor sfaturi în beneficiul altora. Utilizatorii pot 'iubi' hacks pentru a interacționa cu alți utilizatori. Textul și emoji-urile asociate îi ajută pe utilizatori să filtreze postările pentru sugestii tematice relevante pentru ei."
+        "description": "Happy Hacks oferă sfaturi motivaționale pentru creșterea fericirii. Utilizatorii pot vizualiza sfaturi aleatorii, crea propriile sfaturi și interacționa cu postările altora."
       },
       "neuroSisters": {
         "title": "Neuro Sisters",
-        "description": "Un site unde femeile care sunt mame sau îngrijitoare ale copiilor neurodivergenți adulți pot afla despre suport și resurse pentru propria lor sănătate mentală și fizică. Site-ul are funcționalitate de autentificare, iar odată ce utilizatorii sunt autentificați, pot vedea postări de la alții cu sugestii despre cum să-și mențină și îmbunătățească sănătatea mentală și fizică. Toți utilizatorii au, de asemenea, o pagină de profil. Această temă a fost aleasă deoarece, deși există multe grupuri de suport și resurse pentru îngrijitorii copiilor neurodivergenți, nu sunt multe grupuri sau resurse pentru îngrijitorii adulților neurodivergenți."
+        "description": "Un site pentru femeile care îngrijesc adulți neurodivergenți, oferind suport, resurse și o comunitate pentru sănătate și bunăstare"
       },
       "starQuiz": {
         "title": "Star Quiz",
-        "description": "Pentru tema hackathon-ului Code Institute din luna mai, echipa Star Wars Jedi Juggernauts a creat un quiz Star Wars care te poartă printr-o călătorie pe planetele vizitate de Luke Skywalker."
+        "description": "Un quiz Star Wars care te ghidează prin planetele vizitate de Luke Skywalker."
       }
     }
   }
