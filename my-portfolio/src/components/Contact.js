@@ -50,10 +50,10 @@ export default function Contact() {
       <div className="flex flex-col items-center mt-6 pb-6">
         <p className="leading-relaxed text-darkerSecondary mb-6">{t('contact.findMeOn')}</p>
         <div className="flex">
-          <a href="https://www.linkedin.com/in/alina-teodora-brinzac/" className="text-darkerPrimary mx-2 pr-6">
+          <a href="https://www.linkedin.com/in/alina-teodora-brinzac/" className="text-darkerPrimary mx-2 pr-6" target='_blank' rel="noreferrer">
             <FaLinkedin size={40} />
           </a>
-          <a href="https://github.com/TeodoraAlina" className="text-darkerPrimary mx-2">
+          <a href="https://github.com/TeodoraAlina" className="text-darkerPrimary mx-2" target='_blank' rel="noreferrer">
             <FaGithub size={40} />
           </a>
         </div>

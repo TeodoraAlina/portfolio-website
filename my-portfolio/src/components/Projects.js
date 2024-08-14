@@ -26,7 +26,7 @@ export default function Projects() {
         <div ref={itemsRef} className="flex flex-wrap -m-4">
           {itemAnimations.map((style, index) => (
             <animated.div
-              onClick={() => window.location.href = projects[index].link}
+            onClick={() => window.open(projects[index].link, '_blank')}
               key={projects[index].key}
               style={style}
               className="sm:w-1/2 w-full p-4 cursor-pointer flex flex-col"
@@ -51,6 +51,8 @@ export default function Projects() {
                     href={projects[index].github}
                     className="mt-4 px-4 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded text-sm"
                     onClick={(e) => e.stopPropagation()}
+                    target='_blank'
+                    rel="noreferrer"
                   >
                     Github Repository
                   </a>
