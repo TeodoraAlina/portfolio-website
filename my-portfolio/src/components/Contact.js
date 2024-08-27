@@ -10,14 +10,18 @@ export default function Contact() {
     <section id="contact" className="relative font-roboto px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto flex flex-col md:flex-row">
         <div className="lg:w-2/3 md:w-1/2 bg-darkerPrimary rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-          <iframe
-            width="100%"
-            height="100%"
-            title={t('contact.map')}
-            className="absolute inset-0"
-            style={{ filter: "opacity(0.7)" }}
-            src={process.env.REACT_APP_GOOGLE_MAPS_SRC}
-          />
+          {process.env.REACT_APP_GOOGLE_MAPS_SRC ? (
+            <iframe
+              loading="lazy"
+              width="100%"
+              height="100%"
+              title={t('contact.map')}
+              className="absolute inset-0 opacity-70"
+              src={process.env.REACT_APP_GOOGLE_MAPS_SRC}
+            />
+          ) : (
+            <p className="text-secondary">{t('contact.mapUnavailable')}</p>
+          )}
           <div className="bg-darkerPrimary bg-opacity-90 relative flex flex-wrap py-6 rounded shadow-md w-full">
             <div className="lg:w-1/2 w-full px-6 mb-4 lg:mb-0">
               <h2 className="title-font font-semibold text-darkerSecondary tracking-widest text-xs text-center">
@@ -31,7 +35,10 @@ export default function Contact() {
               <h2 className="title-font font-semibold text-darkerSecondary tracking-widest text-xs">
                 {t('contact.email')}
               </h2>
-              <a className="text-secondary leading-relaxed break-words" href="mailto:alina.teower@gmail.com">
+              <a
+                className="text-secondary leading-relaxed break-words"
+                href="mailto:alina.teower@gmail.com"
+              >
                 alina.teower@gmail.com
               </a>
             </div>
@@ -50,10 +57,22 @@ export default function Contact() {
       <div className="flex flex-col items-center mt-6 pb-6">
         <p className="leading-relaxed text-darkerSecondary mb-6">{t('contact.findMeOn')}</p>
         <div className="flex">
-          <a href="https://www.linkedin.com/in/alina-teodora-brinzac/" className="text-darkerPrimary mx-2 pr-6" target='_blank' rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/alina-teodora-brinzac/"
+            aria-label="LinkedIn"
+            className="text-darkerPrimary mx-2 pr-6 transition-transform duration-300 hover:scale-105"
+            target='_blank'
+            rel="noreferrer"
+          >
             <FaLinkedin size={40} />
           </a>
-          <a href="https://github.com/TeodoraAlina" className="text-darkerPrimary mx-2" target='_blank' rel="noreferrer">
+          <a
+            href="https://github.com/TeodoraAlina"
+            aria-label="GitHub"
+            className="text-darkerPrimary mx-2 transition-transform duration-300 hover:scale-105"
+            target='_blank'
+            rel="noreferrer"
+          >
             <FaGithub size={40} />
           </a>
         </div>

@@ -59,7 +59,7 @@ export const collaborativeProjects = [
      subtitle: "HTML5, CSS, JavaScript, Python, Django, JQuery",
      title: "The Lovers Blog",
      description: "A Valentine's-themed hackathon project by Cupid-Devils, allowing users to post tips for a better love life.",
-     image: "",
+     image: "./assets/lovers-blog.jpg",
      link: "",
      github: "https://github.com/TeodoraAlina/cupid_devils"
    },
@@ -86,7 +86,7 @@ export const collaborativeProjects = [
       subtitle: "HTML, CSS, JavaScript, Python, Django, Tailwind CSS",
       title: "Star Quiz",
       description: "A Star Wars quiz that guides you through planets visited by Luke Skywalker.",
-      image: "",
+      image: "./assets/star-quiz.jpg",
       link: "",
       github: "https://github.com/TeodoraAlina/StarQuiz"
     },
