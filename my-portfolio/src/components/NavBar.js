@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { ArrowRightIcon, MenuIcon, XIcon } from "@heroicons/react/solid";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -9,26 +9,28 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  }, []);
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setIsOpen(false);
     }
-  };
+  }, []);
 
-  const handleNavLinkClick = () => {
+  const closeMenuOnLinkClick = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    const handleDocumentClick = (event) => handleClickOutside(event);
+    document.addEventListener("mousedown", handleDocumentClick);
+    
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleDocumentClick);
     };
-  }, []);
+  }, [handleClickOutside]);
 
   return (
     <header className="bg-primary md:sticky top-0 z-10 shadow-lg">
@@ -45,17 +47,18 @@ export default function Navbar() {
             <button 
               className="inline-flex items-center text-textPrimary focus:outline-none ml-2" 
               onClick={toggleMenu} 
-              aria-label={t('navbar.toggle_menu')}>
+              aria-label={t('navbar.toggle_menu')}
+              aria-expanded={isOpen}>
               {isOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
           </div>
         </div>
         <nav className={`md:flex flex-grow items-center text-textPrimary ${isOpen ? 'block' : 'hidden'} md:block`}>
           <div className="flex flex-col md:flex-row md:mr-auto md:ml-4 md:pl-6 md:border-l-2 md:border-accent md:space-x-5 space-y-2 md:space-y-0">
-            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale md:mt-0 mt-4" onClick={handleNavLinkClick}>
+            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale md:mt-0 mt-4" onClick={closeMenuOnLinkClick}>
               {t('navbar.pastWork')}
             </a>
-            <a href="#skills" className="hover:text-textHover transition duration-300 ease-in-out hover-scale" onClick={handleNavLinkClick}>
+            <a href="#skills" className="hover:text-textHover transition duration-300 ease-in-out hover-scale" onClick={closeMenuOnLinkClick}>
               {t('navbar.skills')}
             </a>
           </div>
@@ -66,7 +69,7 @@ export default function Navbar() {
             <a
               href="#contact"
               className="inline-flex items-center border-0 py-1 px-3 text-textPrimary focus:outline-none hover:bg-accent rounded hover:text-textHover transition duration-300 ease-in-out ml-2"
-              onClick={handleNavLinkClick}>
+              onClick={closeMenuOnLinkClick}>
               {t('navbar.getInTouch')}
               <ArrowRightIcon className="w-4 h-4 ml-1 animate-arrow" />
             </a>
