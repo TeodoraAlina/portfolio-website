@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { animated } from '@react-spring/web';
 import { CodeIcon } from '@heroicons/react/solid';
 import { projects } from '../data/data';
@@ -10,6 +10,10 @@ export default function Projects() {
   const { headerRef, headerAnimation } = useHeaderAnimation();
   const { itemsRef, itemAnimations } = useItemAnimations(projects);
   const { t } = useTranslation();
+
+  const handleCardClick = useCallback((link) => {
+    window.open(link, '_blank');
+  }, []);
 
   return (
     <section id="projects" className="text-primary body-font font-roboto overflow-hidden">
@@ -24,42 +28,45 @@ export default function Projects() {
           </p>
         </animated.div>
         <div ref={itemsRef} className="flex flex-wrap -m-4">
-          {itemAnimations.map((style, index) => (
-            <animated.div
-            onClick={() => window.open(projects[index].link, '_blank')}
-              key={projects[index].key}
-              style={style}
-              className="sm:w-1/2 w-full p-4 cursor-pointer flex flex-col"
-            >
-              <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
-                <img
-                  alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src={projects[index].image}
-                />
-                <div className="absolute inset-0 bg-gray-200 bg-opacity-0 hover:bg-opacity-90 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100">
-                  <h2 className="text-xs font-semibold tracking-wider text-gray-700 mb-4 uppercase">
-                    {projects[index].subtitle}
-                  </h2>
-                  <h1 className="text-xl font-bold text-darkerPrimary mb-4">
-                    {t(`projects.data.${projects[index].key}.title`)}
-                  </h1>
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    {t(`projects.data.${projects[index].key}.description`)}
-                  </p>
-                  <a
-                    href={projects[index].github}
-                    className="mt-4 px-4 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded text-sm"
-                    onClick={(e) => e.stopPropagation()}
-                    target='_blank'
-                    rel="noreferrer"
-                  >
-                    Github Repository
-                  </a>
+          {itemAnimations.map((style, index) => {
+            const project = projects[index];
+            return (
+              <animated.div
+                onClick={() => handleCardClick(project.link)}
+                key={project.key}
+                style={style}
+                className="sm:w-1/2 w-full p-4 cursor-pointer flex flex-col"
+              >
+                <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
+                  <img
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src={project.image}
+                  />
+                  <div className="absolute inset-0 bg-gray-200 bg-opacity-0 hover:bg-opacity-90 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100">
+                    <h2 className="text-xs font-semibold tracking-wider text-gray-700 mb-4 uppercase">
+                      {project.subtitle}
+                    </h2>
+                    <h1 className="text-xl font-bold text-darkerPrimary mb-4">
+                      {t(`projects.data.${project.key}.title`)}
+                    </h1>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      {t(`projects.data.${project.key}.description`)}
+                    </p>
+                    <a
+                      href={project.github}
+                      className="mt-4 px-4 py-2 text-accent bg-primary border-0 focus:outline-none hover:bg-secondaryButtonHover hover:text-textPrimary rounded text-sm"
+                      onClick={(e) => e.stopPropagation()}
+                      target='_blank'
+                      rel="noreferrer"
+                    >
+                      Github Repository
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </animated.div>
-          ))}
+              </animated.div>
+            );
+          })}
         </div>
       </div>
     </section>
