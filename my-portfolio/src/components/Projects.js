@@ -37,7 +37,7 @@ export default function Projects() {
                 style={style}
                 className="sm:w-1/2 w-full p-4 cursor-pointer flex flex-col"
               >
-                <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
+                <div className="relative h-80 overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
                   <img
                     alt={project.title}
                     className="absolute inset-0 w-full h-full object-cover"
