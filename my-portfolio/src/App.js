@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        <main className='text-textPrimary bg-accent body-font'>
+        <main className='text-textPrimary bg-accent'>
           <NavBar />
           <About />
           <Projects />

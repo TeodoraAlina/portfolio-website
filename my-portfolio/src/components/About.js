@@ -37,8 +37,8 @@ export default function About() {
           style={slideInFromLeft}
           className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
         >
-          <h2 className="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-darkerPrimary">
-            <span className="block text-3xl sm:text-4xl font-extrabold">
+          <h2 className="title-font sm:text-4xl text-3xl mb-4 text-darkerPrimary">
+            <span className="block text-3xl sm:text-4xl md:text-3xl font-extrabold font-fira-code">
               {t('about.greeting')}
             </span>
             <span className="block text-lg sm:text-xl font-medium text-darkerSecondary mt-2">

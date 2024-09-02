@@ -16,7 +16,7 @@ export default function Skills() {
       <div className="container px-5 py-10 mx-auto">
         <animated.div ref={headerRef} style={headerAnimation} className="text-center mb-20">
           <ChipIcon className="w-10 inline-block mb-4 text-darkerSecondary" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font text-darkerPrimary mb-6">
+          <h1 className="sm:text-4xl text-3xl font-semibold title-font text-darkerPrimary mb-6 font-fira-code">
             {t('skills.header')}
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-darkerSecondary">

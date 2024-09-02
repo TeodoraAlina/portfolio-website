@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, useContext } from "react";
 import { ArrowRightIcon, MenuIcon, XIcon } from "@heroicons/react/solid";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from 'react-i18next';
+import ThemeContext from '../context/ThemeContext';
 
 export default function Navbar() {
   const { t } = useTranslation();
+  const { theme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -33,14 +35,20 @@ export default function Navbar() {
   }, [handleClickOutside]);
 
   return (
-    <header className="bg-primary md:sticky top-0 z-10 shadow-lg">
-      <div ref={menuRef} className="w-full max-w-7xl mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header 
+      className={`md:sticky top-0 z-10 shadow-lg bg-navbar font-fira-code`}
+    >
+      <div ref={menuRef} className="w-full max-w-7xl mx-auto flex flex-wrap p-4 pt-2 pb-3 flex-col md:flex-row items-center">
         <div className="flex justify-between w-full md:w-auto items-center">
           <a 
             href="#about" 
-            className="title-font font-medium text-textPrimary mb-0 text-2xl" 
+            className="title-font font-medium text-textPrimary mb-0 text-xl pt-4 md:pt-7"
             aria-label={t('navbar.name')}>
-            {t('navbar.name')}
+            <img 
+              src={theme === 'dark' ? '/assets/logo-dark.png' : '/assets/logo.png'}
+              alt="Logo" 
+              className="h-10 md:h-12 object-contain"
+            />
           </a>
           <div className="flex items-center md:hidden">
             <ThemeToggle />
@@ -54,8 +62,8 @@ export default function Navbar() {
           </div>
         </div>
         <nav className={`md:flex flex-grow items-center text-textPrimary ${isOpen ? 'block' : 'hidden'} md:block`}>
-          <div className="flex flex-col md:flex-row md:mr-auto md:ml-4 md:pl-6 md:border-l-2 md:border-accent md:space-x-5 space-y-2 md:space-y-0">
-            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale md:mt-0 mt-4" onClick={closeMenuOnLinkClick}>
+          <div className="flex flex-col md:flex-row md:mr-auto md:ml-4 md:pl-6 md:border-l-2 md:border-accent md:h-10 md:items-center md:space-x-4 space-y-2 md:space-y-0">
+            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale md:mt-0 mt-2" onClick={closeMenuOnLinkClick}>
               {t('navbar.pastWork')}
             </a>
             <a href="#skills" className="hover:text-textHover transition duration-300 ease-in-out hover-scale" onClick={closeMenuOnLinkClick}>

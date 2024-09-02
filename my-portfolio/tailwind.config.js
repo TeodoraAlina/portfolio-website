@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif']
+        'roboto': ['Roboto', 'sans-serif'],
+        'fira-code': ['Fira-Code', 'monospace']
       },
       colors: {
         primary: {
@@ -38,7 +39,10 @@ module.exports = {
         },
         darkerSecondary: {
           DEFAULT: 'var(--color-darkerSecondary)'
-        }
+        },
+        navbar: {
+          DEFAULT: 'var(--color-navbar)'
+        },
       },
     },
   },

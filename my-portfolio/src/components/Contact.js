@@ -45,7 +45,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 bg-darkerSecondary shadow-lg rounded-lg p-8">
-          <h2 className="text-primary text-3xl mb-4 font-semibold title-font">
+          <h2 className="text-primary text-3xl mb-4 font-semibold title-font font-fira-code">
             {t('contact.getInTouch')}
           </h2>
           <p className="leading-relaxed mb-6 text-secondary">
