@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="flex justify-between w-full md:w-auto items-center">
           <a 
             href="#about" 
-            className="title-font font-medium text-textPrimary mb-0 text-xl pt-4 md:pt-7"
+            className="pt-4 md:pt-6"
             aria-label={t('navbar.name')}>
             <img 
               src={theme === 'dark' ? '/assets/logo-dark.png' : '/assets/logo.png'}
@@ -62,11 +62,11 @@ export default function Navbar() {
           </div>
         </div>
         <nav className={`md:flex flex-grow items-center text-textPrimary ${isOpen ? 'block' : 'hidden'} md:block`}>
-          <div className="flex flex-col md:flex-row md:mr-auto md:ml-4 md:pl-6 md:border-l-2 md:border-accent md:h-10 md:items-center md:space-x-4 space-y-2 md:space-y-0">
-            <a href="#projects" className="hover:text-textHover transition duration-300 ease-in-out hover-scale md:mt-0 mt-2" onClick={closeMenuOnLinkClick}>
+          <div className="flex flex-col md:flex-row md:mr-auto md:ml-4 md:border-l-2 md:border-accent md:h-10 md:items-center md:space-x-2 space-y-2 md:space-y-0">
+            <a href="#projects" className="text-sm border-0 py-1 px-2 text-textPrimary focus:outline-none hover:bg-accent rounded hover:text-textHover transition duration-300 ease-in-out ml-2" onClick={closeMenuOnLinkClick}>
               {t('navbar.pastWork')}
             </a>
-            <a href="#skills" className="hover:text-textHover transition duration-300 ease-in-out hover-scale" onClick={closeMenuOnLinkClick}>
+            <a href="#skills" className="text-sm border-0 py-1 px-2 text-textPrimary focus:outline-none hover:bg-accent rounded hover:text-textHover transition duration-300 ease-in-out ml-2" onClick={closeMenuOnLinkClick}>
               {t('navbar.skills')}
             </a>
           </div>
@@ -76,16 +76,16 @@ export default function Navbar() {
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center border-0 py-1 px-3 text-textPrimary focus:outline-none hover:bg-accent rounded hover:text-textHover transition duration-300 ease-in-out ml-2"
+              className="text-sm inline-flex items-center border-0 py-1 px-3 text-textPrimary focus:outline-none hover:bg-accent rounded hover:text-textHover transition duration-300 ease-in-out ml-2"
               onClick={closeMenuOnLinkClick}>
               {t('navbar.getInTouch')}
               <ArrowRightIcon className="w-4 h-4 ml-1 animate-arrow" />
             </a>
-            <div className="hidden md:inline-flex ml-2">
+            <div className="text-sm hidden md:inline-flex ml-2">
               <LanguageSwitcher />
             </div>
           </div>
-          <div className="flex md:hidden justify-center w-full mt-4">
+          <div className="text-sm flex md:hidden justify-center w-full mt-4">
             <LanguageSwitcher />
           </div>
         </nav>
