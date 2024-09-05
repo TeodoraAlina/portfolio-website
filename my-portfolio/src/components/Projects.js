@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { animated } from '@react-spring/web';
 import { CodeIcon } from '@heroicons/react/solid';
 import { projects } from '../data/data';
@@ -11,9 +11,17 @@ export default function Projects() {
   const { itemsRef, itemAnimations } = useItemAnimations(projects);
   const { t } = useTranslation();
 
+  const [imageLoadStates, setImageLoadStates] = useState(
+    projects.reduce((acc, project) => ({ ...acc, [project.key]: true }), {})
+  );
+
   const handleCardClick = useCallback((link) => {
     window.open(link, '_blank');
   }, []);
+
+  const handleImageError = (key) => {
+    setImageLoadStates((prevStates) => ({ ...prevStates, [key]: false }));
+  };
 
   return (
     <section id="projects" className="text-primary body-font font-roboto overflow-hidden">
@@ -37,13 +45,24 @@ export default function Projects() {
                 style={style}
                 className="sm:w-1/2 w-full p-4 cursor-pointer flex flex-col"
               >
-                <div className="relative h-80 overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <div
+                  className={`relative h-80 overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 ${
+                    imageLoadStates[project.key] ? 'hover:scale-105' : 'hover:bg-opacity-90'
+                  }`}
+                >
                   <img
                     alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                      imageLoadStates[project.key] ? 'opacity-100' : 'opacity-0'
+                    }`}
                     src={project.image}
+                    onError={() => handleImageError(project.key)}
                   />
-                  <div className="absolute inset-0 bg-gray-200 bg-opacity-0 hover:bg-opacity-90 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100">
+                  <div
+                    className={`absolute inset-0 bg-gray-200 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4 ${
+                      imageLoadStates[project.key] ? 'opacity-0 hover:opacity-100' : 'opacity-100'
+                    }`}
+                  >
                     <h2 className="text-xs font-semibold tracking-wider text-gray-700 mb-4 uppercase">
                       {project.subtitle}
                     </h2>
