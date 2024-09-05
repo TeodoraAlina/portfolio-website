@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpring, animated, useSpringRef, useChain } from "@react-spring/web";
 import { useTranslation } from 'react-i18next';
 
@@ -29,6 +29,8 @@ export default function About() {
   });
 
   useChain([textSpringRef, imageSpringRef], [0, 0.5]);
+
+  const [imageLoaded, setImageLoaded] = useState(true);
 
   return (
     <section id="about" className="overflow-hidden">
@@ -70,15 +72,17 @@ export default function About() {
             </animated.a>
           </div>
         </animated.div>
-        <animated.div style={slideInFromRight} className="grid min-h-[140px] w-medium place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
-          <img
-            className="object-cover object-center w-medium rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
-            src='./assets/hero.jpeg'
-            alt="hero"
-            loading="lazy"
-            onError={(e) => { e.target.src = './assets/fallback-image.jpeg'; }}
-          />
-        </animated.div>
+        {imageLoaded && (
+          <animated.div style={slideInFromRight} className="grid min-h-[140px] w-medium place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+            <img
+              className="object-cover object-center w-medium rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
+              src='./assets/hero.jpeg'
+              alt="hero"
+              loading="lazy"
+              onError={() => setImageLoaded(false)}
+            />
+          </animated.div>
+        )}
       </div>
     </section>
   );
