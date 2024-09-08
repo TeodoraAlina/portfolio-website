@@ -9,6 +9,7 @@ export default function Navbar() {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [logoFailed, setLogoFailed] = useState(false);
   const menuRef = useRef(null);
 
   const toggleMenu = useCallback(() => {
@@ -23,6 +24,10 @@ export default function Navbar() {
 
   const closeMenuOnLinkClick = useCallback(() => {
     setIsOpen(false);
+  }, []);
+
+  const handleLogoError = useCallback(() => {
+    setLogoFailed(true);
   }, []);
 
   useEffect(() => {
@@ -40,21 +45,28 @@ export default function Navbar() {
     >
       <div ref={menuRef} className="w-full max-w-7xl mx-auto flex flex-wrap p-4 pt-2 pb-3 flex-col md:flex-row items-center">
         <div className="flex justify-between w-full md:w-auto items-center">
-          <a 
-            href="#about" 
-            className="pt-4 md:pt-6"
+          <a
+            href="#about"
+            className={logoFailed ? "" : "pt-4 md:pt-6"}
             aria-label={t('navbar.name')}>
-            <img 
-              src={theme === 'dark' ? '/assets/logo-dark.png' : '/assets/logo.png'}
-              alt="Logo" 
-              className="h-10 md:h-12 object-contain"
-            />
+             {logoFailed ? (
+             <span className="text-textPrimary text-xl">
+                Alina Teodora Brinzac
+             </span>
+            ) : (
+              <img
+                src={theme === 'dark' ? '/assets/logo-dark.png' : '/assets/logo.png'}
+                alt="Logo"
+                className="h-10 md:h-12 object-contain"
+                onError={handleLogoError}
+              />
+            )}
           </a>
           <div className="flex items-center md:hidden">
             <ThemeToggle />
-            <button 
-              className="inline-flex items-center text-textPrimary focus:outline-none ml-2" 
-              onClick={toggleMenu} 
+            <button
+              className="inline-flex items-center text-textPrimary focus:outline-none ml-2"
+              onClick={toggleMenu}
               aria-label={t('navbar.toggle_menu')}
               aria-expanded={isOpen}>
               {isOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
